@@ -6,6 +6,10 @@
     height: 100%;
 }
 
+h1, #instructions{
+    text-align: center;
+}
+
 #grid{
     margin: 0 auto;
     width: 400px;
