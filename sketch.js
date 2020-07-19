@@ -40,7 +40,11 @@ function createGrid(dimensions = 2){
         square.style.cssText = "border: 0.5px solid black";
         // create a hover event to change the background color
         square.addEventListener("mouseover", (e) => {
-            e.target.style.background= "gold";
+            // sets a color randomly there is not one
+            if(e.target.style.background == "" ){
+                e.target.style.background = `rgb( ${Math.floor(Math.random() * 256)}, 
+                ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)} )`;
+            }
         });
         // append cell to the grid
         grid.appendChild(square);
